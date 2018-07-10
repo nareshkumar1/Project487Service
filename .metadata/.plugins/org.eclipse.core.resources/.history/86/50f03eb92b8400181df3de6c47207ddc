@@ -1,0 +1,26 @@
+package com.project487.daoImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.project487.dao.AdminDao;
+import com.project487.domain.Organization;
+import com.project487.repository.OrganizationRepository;
+
+@Component
+public class AdminDaoImpl implements AdminDao{
+
+	@Autowired
+	OrganizationRepository organizationRepository;
+	
+	@Override
+	public void addNewOrganization(String orgId, String orgName, String orgType) {
+		
+		Organization organization = new Organization();
+		organization.setOrganizationId(orgId);
+		organization.setOrganizationName(orgName);
+		organization.setOrganizationType(orgType);
+		organizationRepository.save(organization);
+	}
+
+}

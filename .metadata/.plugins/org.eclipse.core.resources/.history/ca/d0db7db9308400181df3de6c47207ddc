@@ -1,0 +1,26 @@
+package com.project487;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.project487.dao.AdminDao;
+
+@SpringBootApplication
+public class Project487Application implements CommandLineRunner {
+
+	@Autowired
+	private AdminDao adminDaoImpl;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Project487Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		adminDaoImpl.addNewOrganization("10113", "Project487","MidSize");
+
+	}
+}

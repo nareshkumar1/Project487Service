@@ -1,0 +1,8 @@
+package com.project487.utils;
+
+import com.project487.daoImpl.AdminDaoImpl;
+
+public class Utilities {
+	
+
+}

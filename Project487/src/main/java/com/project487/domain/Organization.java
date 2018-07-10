@@ -1,0 +1,71 @@
+package com.project487.domain;
+
+
+import java.io.Serializable;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "organizations")
+public class Organization implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private long id;
+	private String organizationId;
+	private String organizationName;
+	private String organizationType;
+	
+	private OrganizationAddress address;
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getOrganizationId() {
+		return organizationId;
+	}
+
+	public void setOrganizationId(String organizationId) {
+		this.organizationId = organizationId;
+	}
+
+	public String getOrganizationName() {
+		return organizationName;
+	}
+
+	public void setOrganizationName(String organizationName) {
+		this.organizationName = organizationName;
+	}
+
+	public String getOrganizationType() {
+		return organizationType;
+	}
+
+	public void setOrganizationType(String organizationType) {
+		this.organizationType = organizationType;
+	}
+
+	public OrganizationAddress getAddress() {
+		return address;
+	}
+
+	public void setAddress(OrganizationAddress address) {
+		this.address = address;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+	
+
+}

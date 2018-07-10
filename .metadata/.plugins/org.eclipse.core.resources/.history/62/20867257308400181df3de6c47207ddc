@@ -1,0 +1,11 @@
+package com.project487.utils;
+
+import com.project487.daoImpl.AdminDaoImpl;
+
+public class Utilities {
+	public static void main(String[] args) {
+		AdminDaoImpl impl = new AdminDaoImpl();
+		impl.addNewOrganization("10113", "Project487","MidSize");
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.project487.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.project487.domain.OrganizationAddress;
+
+public interface OrganizationAddressRepository extends MongoRepository<OrganizationAddress, Long> {
+
+}

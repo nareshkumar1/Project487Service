@@ -1,0 +1,5 @@
+package com.project487.repository;
+
+public class OrganizationRepository {
+
+}

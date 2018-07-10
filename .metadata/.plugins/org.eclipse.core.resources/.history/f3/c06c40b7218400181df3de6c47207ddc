@@ -1,0 +1,5 @@
+package com.project487.domain;
+
+public class Organization {
+
+}
